@@ -1,0 +1,11 @@
+set firewall family inet filter INET-OUTPUT-SAO04-VL22-BACKUP term ALLOW-ESTABLISHED from tcp-established
+set firewall family inet filter INET-OUTPUT-SAO04-VL22-BACKUP term ALLOW-ESTABLISHED then accept
+ 
++set firewall family inet filter INET-OUTPUT-DAL12-VL22-BACKUP term ALLOW-EV-VAULTSAO0401 from protocol tcp
++set firewall family inet filter INET-OUTPUT-DAL12-VL22-BACKUP term ALLOW-EV-VAULTSAO0401 from destination-port 807
++set firewall family inet filter INET-OUTPUT-DAL12-VL22-BACKUP term ALLOW-EV-VAULTSAO0401 from destination-port 2546
++set firewall family inet filter INET-OUTPUT-DAL12-VL22-BACKUP term ALLOW-EV-VAULTSAO0401 from destination-address 10.202.214.250/32
++set firewall family inet filter INET-OUTPUT-DAL12-VL22-BACKUP term ALLOW-EV-VAULTSAO0401 then accept
+ 
+ set firewall family inet filter INET-OUTPUT-SAO04-VL22-BACKUP term ALLOW-INTERNAL from source-address 10.0.0.0/14
+ set firewall family inet filter INET-OUTPUT-SAO04-VL22-BACKUP term ALLOW-INTERNAL from source-address 10.198.0.0/15
